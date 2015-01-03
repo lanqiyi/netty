@@ -1,0 +1,19 @@
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+
+    version = rootProject.version
+
+    repositories {
+        maven {
+             url 'http://maven.oschina.net/content/groups/public/'
+        }
+    }
+
+    dependencies {
+        compile 'io.netty:netty:3.9.6.Final'
+
+        testCompile 'junit:junit:4.10'
+    }
+}
